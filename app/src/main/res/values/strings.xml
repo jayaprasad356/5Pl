@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">5PL</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    //Headings
+    <string name="heading_one">Farming</string>
+    <string name="heading_two">Buying</string>
+    <string name="heading_three">Selling</string>
+    <string name="heading_fourth">Pay Anywhere</string>
+
+    //Description
+    <string name="desc_one">Harvesting vegetables from our farm buy and selling fresh vegetables</string>
+    <string name="desc_two">Buying vegetables from our farm and put margin resell to the market</string>
+    <string name="desc_three">Selling your vegetables to our marketplace and earn money</string>
+    <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="withdrwal_instraction">1. Minimum withdrawal amount is 200RS\n2. Withdrawal time: Monday to Friday 10:00am-05:30pm\n3. Do not rush your manager within 48 hours of application submission. Once you submit your withdrawal, the bank is queuing up to process it for you. If your withdrawal has not been received within 48 hours, please contact your manager for enquiry \n4. IFSC should be 11 characters and the fifth character should be 0, not O. If you fill in incorrect bank information, your withdrawal will fail.</string>
+    <string name="bank_instraction">* Cardholder name (5-30 characters).\n* Ifsc is 11 characters and the fifth digit is the number 0.
+</string>
+</resources>

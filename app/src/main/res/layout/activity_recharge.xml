@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acitivity.RechargeActivity">
+
+    <RelativeLayout
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_left" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Recharge"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_14sdp"
+        android:layout_below="@+id/rlToolbar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center"
+            android:id="@+id/avRecharge"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            app:lottie_rawRes="@raw/recharge"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Recharge Amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <EditText
+            android:layout_marginTop="@dimen/_4sdp"
+            android:id="@+id/etAmount"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Amount"
+            android:maxLength="4"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_14sdp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext"
+            android:keyboardNavigationCluster="false"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:backgroundTint="@color/primary_color"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Rechage Now"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/_10sdp" />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InviteActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp">
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_left" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Refer friends"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_14sdp"
+        android:layout_below="@+id/rlHeader"
+        android:id="@+id/rlInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan QR code to join"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tvName"
+            android:id="@+id/iv_qrcode"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"/>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/iv_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rlCopy"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/copybg"
+                >
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/ivcopy"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:background="@drawable/copy_ic"
+                    />
+
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:id="@+id/tvCopy"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivcopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Copy"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+            </RelativeLayout>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_weight="1"
+                android:id="@+id/btnInvite"
+                app:cornerRadius="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:backgroundTint="@color/primary_color"
+                android:text="Invite"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

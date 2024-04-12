@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_14sdp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp">
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_left" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Payment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/ivQr"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            />
+
+            <TextView
+                android:id="@+id/tvOpen"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open"
+                android:textSize="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/blue_color"
+                />
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan and pay for your purchase, then wait for up to 15 minutes for your wallet to recharge, or it may be completed within a day."
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tvtiming"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAYMENT APPROVED TIME 9.00 AM TO 9.00 PM"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/orage_color"
+            />
+
+
+        <ImageView
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:background="@drawable/youtube_ong"
+            />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDemoVideo"
+            app:cornerRadius="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_color"
+            android:text="Demo video "
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_medium"
+            />
+
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment and sent  screenshot here"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload image"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvImage"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_120sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            android:backgroundTint="#8ADDB7"
+            >
+
+
+
+            <ImageButton
+                android:id="@+id/ibAdd"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_plus"
+                android:backgroundTint="@color/black"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"/>
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpload"
+            android:enabled="false"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_color"
+            android:text="Upload"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_medium"
+            />
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlHistory"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/history_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.MoreFragment">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:background="@color/primary_color"
+            android:paddingBottom="@dimen/_14sdp"
+            android:id="@+id/rlMyTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/llProfile"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/tvTitle"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <RelativeLayout
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@drawable/profile"
+                        />
+
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/ivProfile"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="name"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvMobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="944200200"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="@dimen/_10sdp"
+                            android:textColor="@color/white"
+                            android:layout_below="@+id/tvName"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvTotalIncome"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/inter_semibold"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total income"
+                                android:textSize="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:textColor="@color/yellow_color"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:background="@color/white"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvTotalRecharge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/inter_semibold"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total recharge"
+                                android:textSize="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:textColor="@color/yellow_color"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:background="@color/white"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvTotalAssests"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/inter_semibold"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total assests"
+                                android:textSize="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:textColor="@color/yellow_color"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llWithdraw"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvTotalWithdrawal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/inter_semibold"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total withdraw"
+                                android:textSize="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:textColor="@color/yellow_color"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:background="@color/white"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvTodayIncome"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/inter_semibold"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Today's income"
+                                android:textSize="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:textColor="@color/yellow_color"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:background="@color/white"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvTeamIncome"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/_12sdp"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/inter_semibold"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Team income"
+                                android:textSize="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:textColor="@color/yellow_color"
+                                android:fontFamily="@font/poppins_regular"
+                                />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+            
+
+        </RelativeLayout>
+
+
+        
+        <RelativeLayout
+            android:orientation="vertical"
+            android:background="@color/primary_color"
+            android:id="@+id/rlmore"
+            android:layout_below="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp">
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_color"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/gold_color"
+                    android:id="@+id/llInvite"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:background="@drawable/invite_ic"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Invite"
+                        android:textSize="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_medium"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@color/primary_light"
+                    android:id="@+id/llServices"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:background="@drawable/ic_service"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"/>
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Support"
+                        android:textSize="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_medium"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            
+        </RelativeLayout>
+
+       
+
+        <LinearLayout
+            android:id="@+id/l1d"
+            android:layout_margin="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/rlmore"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvWithdraw"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primary_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Withdraw"
+                        />
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+            <Space
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvRecharge"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/primary_color"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primary_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/add_recharge"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recharge"
+                        />
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_below="@+id/l1d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardUseCompatPadding="true"
+                    >
+
+
+                    <LinearLayout
+                        android:padding="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlwithdrawhistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+
+                            <ImageView
+                                android:layout_centerVertical="true"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/withdraw_ic"
+                                />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_50sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Withdraw History"
+                                android:textSize="@dimen/_12sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/black"
+                                />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:dividerThickness="1dp"
+                                app:dividerColor="@color/grey_extra_light"
+                                />
+
+                        </RelativeLayout>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_10sdp"/>    <RelativeLayout
+                        android:id="@+id/rlhistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/history_ic"
+                            />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_50sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="History Transaction"
+                            android:textSize="@dimen/_12sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"
+                            />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:dividerThickness="1dp"
+                            app:dividerColor="@color/grey_extra_light"
+                            />
+
+                    </RelativeLayout>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_10sdp"/>
+                        <RelativeLayout
+                            android:id="@+id/rlUpdateprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+
+                            <ImageView
+                                android:layout_centerVertical="true"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/update_profile_ic"
+                                />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_50sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="My Profile"
+                                android:textSize="@dimen/_12sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/black"
+                                />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:dividerThickness="1dp"
+                                app:dividerColor="@color/grey_extra_light"
+                                />
+
+                        </RelativeLayout>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_10sdp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rlChangepassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+
+                            <ImageView
+                                android:layout_centerVertical="true"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/password_ic"
+                                />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_50sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Set Password"
+                                android:textSize="@dimen/_12sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/black"
+                                />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:dividerThickness="1dp"
+                                app:dividerColor="@color/grey_extra_light"
+                                />
+
+                        </RelativeLayout>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_10sdp"/>
+                        <RelativeLayout
+                            android:id="@+id/rlmyBank"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+
+                            <ImageView
+                                android:layout_centerVertical="true"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/ic_bank"
+                                />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_50sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="My Bank Account"
+                                android:textSize="@dimen/_12sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/black"
+                                />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:dividerThickness="1dp"
+                                app:dividerColor="@color/grey_extra_light"
+                                />
+
+                        </RelativeLayout>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_10sdp"/>
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/rlCutomerSupport"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+
+                            <ImageView
+                                android:layout_centerVertical="true"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/support_ic"
+                                />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_50sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Customer Support"
+                                android:textSize="@dimen/_12sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/black"
+                                />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:dividerThickness="1dp"
+                                app:dividerColor="@color/grey_extra_light"
+                                />
+
+                        </RelativeLayout>
+                        <Space
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_10sdp"/>
+                        <RelativeLayout
+                            android:id="@+id/rlLogout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+
+                            <ImageView
+                                android:layout_centerVertical="true"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/logout_ic"
+                                />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_50sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Logout"
+                                android:textSize="@dimen/_12sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/black"
+                                />
+
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

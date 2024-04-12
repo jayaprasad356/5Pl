@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.MyteamFragment">
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rlInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invite  your friends get  bonus"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            />
+
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rlCopy"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/copybg"
+                >
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/ivcopy"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:background="@drawable/copy_ic"
+                    />
+
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:id="@+id/tvCopy"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivcopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+            </RelativeLayout>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_weight="1"
+                android:id="@+id/btnInvite"
+                app:cornerRadius="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:backgroundTint="@color/primary_color"
+                android:text="Invite"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/rlMyTeam"
+        android:background="@color/primary_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Team"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            />
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/tvTitle"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/profile"
+                    />
+
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:id="@+id/tvMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    />
+
+                <TextView
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/tvWeekInvite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Invite last week : 0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvTeamsize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Team Size"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/yellow_color"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvValidTeam"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Valid Team"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/yellow_color"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="55"
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Invitation"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/yellow_color"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="55"
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Valid Invitation"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@color/yellow_color"
+                            android:fontFamily="@font/poppins_regular"
+                            />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_margin="@dimen/_14sdp"
+        android:padding="@dimen/_14sdp"
+        android:layout_below="@+id/rlMyTeam"
+        android:background="@drawable/bg_listmyteam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlBonus"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/primary_light"
+            android:padding="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlBonus1"
+                    android:padding="@dimen/_6sdp"
+                    android:background="@drawable/rounded_corner"
+                    android:backgroundTint="@color/primary_color"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvBonus1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="B-10% Bonus"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlBonus2"
+                    android:padding="@dimen/_6sdp"
+                    android:background="@drawable/rounded_corner"
+                    android:backgroundTint="@color/primary_light"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvBonus2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="C-5% Bonus"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlBonus3"
+                    android:padding="@dimen/_6sdp"
+                    android:background="@drawable/rounded_corner"
+                    android:backgroundTint="@color/primary_light"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvBonus3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="D-2% Bonus"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        />
+
+                </RelativeLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:padding="@dimen/_4sdp"
+            android:layout_below="@+id/rlBonus"
+            android:id="@+id/tvMember"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/_12sdp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/tvMember"
+            android:id="@+id/rvMyTeamB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty" />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

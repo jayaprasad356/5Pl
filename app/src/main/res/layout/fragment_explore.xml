@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_14sdp"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.ExploreFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:padding="@dimen/_10sdp"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+
+
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:src="@drawable/pocter_farm"
+                    android:scaleType="fitCenter"
+                    />
+
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_6sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What is Pocket Farm?"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/primary_color"
+                android:fontFamily="@font/poppins_medium"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pocket Farm is an agriculture app you can earn money by buying and selling vegetables online"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Farmers Biggest Problem"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/primary_color"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Challenges Faced by Farmers in Obtaining Fair Prices in the Market"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/gold_color"
+                android:fontFamily="@font/poppins_regular"
+                />
+            <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Farmers may struggle to access markets that offer fair prices for their produce. Additionally, fluctuating commodity prices can affect the profitability of their crops, making it challenging to plan and sustain a viable business."
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How Pocket Farm Solve Problems"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/primary_color"
+                android:fontFamily="@font/poppins_medium"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pocket Farm Have a virtual marketplace, facilitating direct sales between farmers and consumers. By cutting out intermediaries, Pocket Farm empowers farmers to showcase and sell their produce directly, ensuring fair prices and increasing their market reach."
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/explore_img"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Community Collaboration:"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/gold_color"
+                android:fontFamily="@font/poppins_regular"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pocket Farm fosters a sense of community by connecting farmers with each other. A forum and chat features allow farmers to share experiences, seek advice, and collaborate on common challenges, creating a supportive network for agricultural practitioners."
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How Pocket Farm Works?"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/primary_color"
+                android:fontFamily="@font/poppins_medium"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Users Buy from the farm -> Sell to the market"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/gold_color"
+                android:fontFamily="@font/poppins_regular"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/cycle_ecplore"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_6sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We have large amount on farming land and we harvest
+fresh vegetables and pocket farm users buy vegetables
+and sell in market they will earn money"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Business Model"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/primary_color"
+                android:fontFamily="@font/poppins_medium"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_220sdp"
+                android:background="@drawable/roadmap_explore"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How Profit Within a Day?"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/primary_color"
+                android:fontFamily="@font/poppins_medium"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Users can buy and sell vegetables in market in high profit margin"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/step_ic"
+                android:scaleType="fitCenter"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Support"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/primary_color"
+                android:fontFamily="@font/poppins_medium"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We have Live Chat good customer support Monday to Saturday 9AM to 6PM Customer support available"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</com.google.android.material.card.MaterialCardView>
