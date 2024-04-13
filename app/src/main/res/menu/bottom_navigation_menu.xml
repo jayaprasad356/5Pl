@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/navplan"
-        android:icon="@drawable/nav_plan"
+        android:icon="@drawable/play"
         android:title="Production" />
 
 

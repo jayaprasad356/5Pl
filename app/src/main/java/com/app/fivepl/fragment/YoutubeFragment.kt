@@ -9,12 +9,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import com.app.fivepl.R
 import com.app.fivepl.databinding.FragmentYoutubeBinding
 import com.app.fivepl.helper.Session
 import com.google.android.material.card.MaterialCardView
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.customui.DefaultPlayerUiController
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.options.IFramePlayerOptions
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 
 
@@ -23,10 +27,10 @@ class YoutubeFragment : Fragment() {
     private var binding: FragmentYoutubeBinding? = null
     private var activity: Activity? = null
     private var session: Session? = null
+    private var canPlayVideo: Boolean = true
 
     var i = 0
     private var countDownTimer: CountDownTimer? = null
-
 
 
     override fun onCreateView(
@@ -44,13 +48,37 @@ class YoutubeFragment : Fragment() {
         // using pre-made custom ui
 
 
-        binding!!.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
-            override fun onReady(youTubePlayer: YouTubePlayer) {
-                val videoId = "S0Q4gqBUs7c"
-                youTubePlayer.loadVideo(videoId, 0f)
-                youTubePlayer.play()
-            }
-        })
+        binding?.youtubePlayerView?.enableAutomaticInitialization = false
+        binding?.youtubePlayerView?.initialize(
+            youTubePlayerListener = object : AbstractYouTubePlayerListener() {
+                override fun onReady(youTubePlayer: YouTubePlayer) {
+                    val defaultPlayerUiController =
+                        DefaultPlayerUiController(binding?.youtubePlayerView!!, youTubePlayer)
+                    with(defaultPlayerUiController) {
+                        showYouTubeButton(false)
+                        showDuration(false)
+                        showCurrentTime(false)
+                        showUi(false)
+                        showSeekBar(false)
+                        showPlayPauseButton(false)
+                        showVideoTitle(false)
+                        showMenuButton(false)
+                        binding?.youtubePlayerView!!.setCustomPlayerUi(rootView)
+                        val videoId = "S0Q4gqBUs7c"
+                        youTubePlayer.loadVideo(videoId, 0f)
+                        if (canPlayVideo) youTubePlayer.play() else youTubePlayer.pause()
+                    }
+                }
+
+                override fun onCurrentSecond(youTubePlayer: YouTubePlayer, second: Float) {
+                    super.onCurrentSecond(youTubePlayer, second)
+                    if (canPlayVideo) youTubePlayer.play() else youTubePlayer.pause()
+                    binding?.youtubePlayerView?.visibility = if (canPlayVideo) View.VISIBLE else View.GONE
+                }
+            },
+            playerOptions = IFramePlayerOptions.Builder()
+                .controls(0).build()
+        )
 
 
 
@@ -74,8 +102,6 @@ class YoutubeFragment : Fragment() {
         }, 100)
 
 
-
-
         // Show the timer text view
 
         // Show the timer text view
@@ -94,12 +120,13 @@ class YoutubeFragment : Fragment() {
                 // Do something when the timer finishes
                 // For example, hide the timerTextView and start the Quiz format
                 binding!!.timerTextView!!.setVisibility(View.GONE)
+                canPlayVideo = false
                 startQuiz()
             }
         }.start()
 
 
-                return binding!!.root
+        return binding!!.root
     }
 
     private fun startQuiz() {
@@ -109,6 +136,13 @@ class YoutubeFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
+        if (countDownTimer != null) {
+            countDownTimer!!.cancel()
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
         if (countDownTimer != null) {
             countDownTimer!!.cancel()
         }

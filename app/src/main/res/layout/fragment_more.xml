@@ -390,7 +390,7 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:background="@color/gold_color"
+                    android:background="@color/primary_light"
                     android:id="@+id/llInvite"
                     android:layout_weight="1"
                     android:orientation="vertical"

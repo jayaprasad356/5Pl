@@ -6,20 +6,25 @@ import android.os.Handler
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.app.fivepl.R
 import com.google.android.material.card.MaterialCardView
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.customui.DefaultPlayerUiController
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.options.IFramePlayerOptions
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 
 
-class YoutubeActivity : AppCompatActivity() {
+class YoutubeActivity : AppCompatActivity(){
 
     private var timerTextView: TextView? = null
     private var countDownTimer: CountDownTimer? = null
     private var cardView: MaterialCardView? = null
-
+    private var canPlayVideo: Boolean = true
     lateinit var progressBar: ProgressBar
     var i = 0
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,17 +38,47 @@ class YoutubeActivity : AppCompatActivity() {
         // using pre-made custom ui
         // using pre-made custom ui
 
+        youTubePlayerView.initialize(
+            youTubePlayerListener = object : AbstractYouTubePlayerListener() {
+                override fun onReady(youTubePlayer: YouTubePlayer) {
+                    val defaultPlayerUiController =
+                        DefaultPlayerUiController(youTubePlayerView, youTubePlayer)
+                    with(defaultPlayerUiController) {
+                        showYouTubeButton(false)
+                        showDuration(false)
+                        showCurrentTime(false)
+                        showUi(false)
+                        showSeekBar(false)
+                        showPlayPauseButton(false)
+                        youTubePlayerView.setCustomPlayerUi(rootView)
+                        val videoId = "S0Q4gqBUs7c"
+                        youTubePlayer.loadVideo(videoId, 0f)
+                        if (canPlayVideo) youTubePlayer.play() else youTubePlayer.pause()
+                    }
+                }
 
-        youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
-            override fun onReady(youTubePlayer: YouTubePlayer) {
-                val videoId = "S0Q4gqBUs7c"
-                youTubePlayer.loadVideo(videoId, 0f)
-                youTubePlayer.play()
+                override fun onStateChange(
+                    youTubePlayer: YouTubePlayer,
+                    state: PlayerConstants.PlayerState
+                ) {
+                    when (state) {
+                        PlayerConstants.PlayerState.PLAYING -> {
+                            if(canPlayVideo) youTubePlayer.play() else youTubePlayer.pause()
+                        }
 
+                        else -> {
 
+                        }
+                    }
+                }
 
-            }
-        })
+                override fun onCurrentSecond(youTubePlayer: YouTubePlayer, second: Float) {
+                    if (canPlayVideo) youTubePlayer.play() else youTubePlayer.pause()
+                }
+            },
+            playerOptions = IFramePlayerOptions.Builder()
+                .controls(0).build()
+        )
 
 
 
@@ -79,7 +114,6 @@ class YoutubeActivity : AppCompatActivity() {
         // Show the timer text view
         timerTextView!!.setVisibility(View.VISIBLE)
 
-        // Start the countdown timer
 
         // Start the countdown timer
         countDownTimer = object : CountDownTimer(10000, 1000) {
@@ -92,11 +126,11 @@ class YoutubeActivity : AppCompatActivity() {
                 // Do something when the timer finishes
                 // For example, hide the timerTextView and start the Quiz format
                 timerTextView!!.setVisibility(View.GONE)
-                startQuiz()
+                canPlayVideo = false
+                Toast.makeText(this@YoutubeActivity,"callback : $canPlayVideo",Toast.LENGTH_SHORT).show()
+//                startQuiz()
             }
         }.start()
-
-
 
 
     }
@@ -105,7 +139,8 @@ class YoutubeActivity : AppCompatActivity() {
     private fun startQuiz() {
         // Start your Quiz format here
         cardView = findViewById<MaterialCardView>(R.id.card_view)
-    cardView!!.visibility = View.VISIBLE
+        cardView!!.visibility = View.VISIBLE
+
     }
 
     override fun onDestroy() {
@@ -114,4 +149,5 @@ class YoutubeActivity : AppCompatActivity() {
             countDownTimer!!.cancel()
         }
     }
+
 }
