@@ -85,5 +85,6 @@
         android:backgroundTint="@color/white"
         android:src="@drawable/ic_fab"
         android:tintMode="add"
+
         app:layout_anchor="@id/bottomAppBar" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
