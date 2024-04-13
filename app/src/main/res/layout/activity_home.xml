@@ -83,9 +83,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
         android:backgroundTint="@color/Purple_color"
-        android:src="@drawable/baseline_ondemand_video_24"
+        android:src="@drawable/ic_fab"
+        android:tintMode="add"
         app:layout_anchor="@id/bottomAppBar" />
-
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

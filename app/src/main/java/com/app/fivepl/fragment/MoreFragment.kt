@@ -39,9 +39,6 @@ class MoreFragment : Fragment() {
     ): View? {
         binding = FragmentMoreBinding.inflate(inflater, container, false)
 
-
-
-
         activity = getActivity() as Activity
         session = com.app.fivepl.helper.Session(activity)
 
