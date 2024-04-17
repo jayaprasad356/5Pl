@@ -151,7 +151,7 @@ class PaymentActivity : AppCompatActivity() {
                         session.setData(Constant.QR_IMAGE, jsonArray.getJSONObject(0).getString(Constant.QR_IMAGE))
                         val qrimage = jsonArray.getJSONObject(0).getString(Constant.QR_IMAGE)
 
-                        Glide.with(activity).load(qrimage).placeholder(R.drawable.logo)
+                        Glide.with(activity).load(qrimage).placeholder(R.drawable.ic_launcher_foreground)
                             .into(binding.ivQr)
 
 

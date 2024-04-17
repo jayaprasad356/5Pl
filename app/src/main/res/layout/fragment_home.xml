@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="@dimen/_14sdp"
     tools:context=".Fragment.HomeFragment">
@@ -366,6 +365,11 @@
         </RelativeLayout>
 
 
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvplan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 
     </LinearLayout>

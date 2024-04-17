@@ -373,7 +373,7 @@
             android:id="@+id/rlmore"
             android:layout_below="@+id/rlHeader"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp">
+            android:layout_height="@dimen/_60sdp">
             <RelativeLayout
                 android:layout_alignParentBottom="true"
                 android:background="@color/bg_color"
@@ -395,7 +395,7 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/bg_gradient">
+                    android:background="@color/white">
 
 
 
@@ -413,13 +413,18 @@
                         android:text="Invite"
                         android:textSize="@dimen/_8sdp"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/poppins_medium"
                         />
 
                 </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_color"
+                    />
                 <LinearLayout
-                    android:background="@color/primary_light"
+                    android:background="@color/white"
                     android:id="@+id/llServices"
                     android:layout_weight="1"
                     android:orientation="vertical"
@@ -446,7 +451,7 @@
                         android:text="Support"
                         android:textSize="@dimen/_8sdp"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/poppins_medium"
                         />
 

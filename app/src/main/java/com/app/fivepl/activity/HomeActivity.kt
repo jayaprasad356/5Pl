@@ -31,6 +31,7 @@ import com.app.fivepl.fragment.MyteamFragment
 import com.app.fivepl.fragment.PlanFragment
 import com.app.fivepl.R
 import com.app.fivepl.databinding.ActivityHomeBinding
+import com.app.fivepl.fragment.TransactionFragment
 import com.app.fivepl.fragment.YoutubeFragment
 import com.app.fivepl.helper.ApiConfig
 import com.app.fivepl.helper.Constant
@@ -69,6 +70,7 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
     private lateinit var moreFragment: MoreFragment
     private lateinit var planFragment: PlanFragment
     private lateinit var youtubeFragment: YoutubeFragment
+    private lateinit var transactionFragment: TransactionFragment
 
 
     private lateinit var mFusedLocationClient: FusedLocationProviderClient
@@ -84,9 +86,9 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         activity = this
         session = com.app.fivepl.helper.Session(activity)
         //tvTitle text is double color text "We" and "Agri"
-        val tvTitle = "<font color='#F8B328'>5</font> " + "<font color='#00B251'>PL</font>"
-
-        binding.tvTitle.text = Html.fromHtml(tvTitle)
+//        val tvTitle = "<font color='#F8B328'>5</font> " + "<font color='#00B251'>PL</font>"
+//
+//        binding.tvTitle.text = Html.fromHtml(tvTitle)
 
         fm = supportFragmentManager
         homeFragment = HomeFragment()
@@ -95,6 +97,8 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         moreFragment = MoreFragment()
         planFragment = PlanFragment()
         youtubeFragment = YoutubeFragment()
+        transactionFragment = TransactionFragment()
+
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -110,11 +114,11 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         bottomNavigationView!!.selectedItemId = R.id.navHome
 
 
-        binding.fab.setOnClickListener {
-            fm.beginTransaction().replace(R.id.fragment_container, youtubeFragment).commit()
-            bottomNavigationView!!.selectedItemId = R.id.placeholder
-
-        }
+//        binding.fab.setOnClickListener {
+//            fm.beginTransaction().replace(R.id.fragment_container, youtubeFragment).commit()
+//            bottomNavigationView!!.selectedItemId = R.id.placeholder
+//
+//        }
 
 
         // Verbose Logging set to help debug issues, remove before releasing your app.
@@ -171,7 +175,7 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 //                    R.anim.slide_in_top_right,
 //                    R.anim.slide_out_bottom_left
 //                )
-                transaction.replace(R.id.fragment_container, planFragment)
+                transaction.replace(R.id.fragment_container, youtubeFragment)
             }
 
 //            R.id.navExplore -> {
@@ -179,7 +183,7 @@ class HomeActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 //            }
 
             R.id.navMyteam ->{
-                transaction.replace(R.id.fragment_container,myteamFragment)
+                transaction.replace(R.id.fragment_container,transactionFragment)
             }
 
             R.id.navMore ->{

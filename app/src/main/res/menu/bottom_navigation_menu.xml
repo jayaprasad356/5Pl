@@ -4,32 +4,24 @@
 
     <item
         android:id="@+id/navHome"
-        android:icon="@drawable/nav_home"
+        android:icon="@drawable/menu_home"
         android:title="Home" />
 
 
     <item
         android:id="@+id/navplan"
-        android:icon="@drawable/nav_plan"
-        android:title="Production" />
-
-
-
-
-    <item
-        android:id="@+id/placeholder"
-        android:title="" />
-
+        android:icon="@drawable/menui_video"
+        android:title="Your Plan" />
 
 
     <item
         android:id="@+id/navMyteam"
-        android:icon="@drawable/nav_myteam"
-        android:title="My Team" />
+        android:icon="@drawable/menu_transfer"
+        android:title="Transaction" />
 
     <item
         android:id="@+id/navMore"
-        android:icon="@drawable/nav_more"
-        android:title="More" />
+        android:icon="@drawable/menu_profile"
+        android:title="My Account" />
 
 </menu>

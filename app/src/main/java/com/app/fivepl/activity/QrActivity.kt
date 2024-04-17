@@ -41,7 +41,7 @@ class QrActivity : AppCompatActivity() {
 
         val qrimage = session.getData(Constant.QR_IMAGE)
 
-        Glide.with(this).load(qrimage).placeholder(R.drawable.logo)
+        Glide.with(this).load(qrimage).placeholder(R.drawable.ic_launcher_foreground)
             .into(binding.ivQr)
 
         binding.btnDownload.setOnClickListener {

@@ -29,6 +29,8 @@ public class Constant {
 
 
     public static final String PLAN_LIST = BaseUrl + "plan_list.php";
+    public static final String SURVEY = BaseUrl + "survey.php";
+    public static final String VIDEO_LIST = BaseUrl + "video_list.php";
     public static final String USER_PLAN_LIST = BaseUrl + "user_plan_list.php";
     public static final String TRANSACTIONS_LIST = BaseUrl + "transactions_list.php";
     public static final String USER_DETAILS = BaseUrl + "user_details.php";
@@ -105,6 +107,8 @@ public class Constant {
 
     public static final String ID = "id";
     public static final String USER_ID = "user_id";
+    public static final String SURVEY_ID = "survey_id";
+    public static final String VIDEO_ID = "video_id";
     public static final String LATITUDE = "latitude";
     public static final String LONGITUDE = "longitude";
     public static final String QR_IMAGE = "qr_image";

@@ -9,14 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.app.fivepl.activity.ChangepasswordActivity
 import com.app.fivepl.activity.HomeActivity
 import com.app.fivepl.activity.PaymentActivity
+import com.app.fivepl.adapter.MyplansAdapter
 import com.app.fivepl.adapter.WithdrawalAdapter
 import com.app.fivepl.model.Withdrawal
 import com.app.fivepl.databinding.FragmentHomeBinding
 import com.app.fivepl.helper.ApiConfig
 import com.app.fivepl.helper.Constant
+import com.app.fivepl.model.MyPlan
 import com.app.fivepl.utils.DialogUtils
 import com.google.gson.Gson
 import org.json.JSONArray
@@ -63,6 +66,9 @@ class HomeFragment : Fragment() {
 //
 //        transaction()
 
+        val linearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        binding.rvplan.layoutManager = linearLayoutManager
+        myplans()
         return binding.root
 
     }
@@ -109,6 +115,51 @@ class HomeFragment : Fragment() {
 //            }
 //        }, activity, com.app.fivepl.helper.Constant.WITHDRAWAL_LIST, params, true)
 //    }
+
+
+    private fun myplans() {
+       // swipeRefreshLayout.setOnRefreshListener { myplans(swipeRefreshLayout) }
+        val params: MutableMap<String, String> = HashMap()
+        params[com.app.fivepl.helper.Constant.USER_ID]= session.getData(com.app.fivepl.helper.Constant.USER_ID)
+        com.app.fivepl.helper.ApiConfig.RequestToVolley({ result, response ->
+            if (result) {
+                try {
+                    val jsonObject = JSONObject(response)
+                    if (jsonObject.getBoolean(com.app.fivepl.helper.Constant.SUCCESS)) {
+                        val `object` = JSONObject(response)
+                        val jsonArray: JSONArray = `object`.getJSONArray(com.app.fivepl.helper.Constant.DATA)
+                        val g = Gson()
+                        val myPlans: java.util.ArrayList<MyPlan> = java.util.ArrayList<MyPlan>()
+                        for (i in 0 until jsonArray.length()) {
+                            val jsonObject1 = jsonArray.getJSONObject(i)
+                            if (jsonObject1 != null) {
+                                val group: MyPlan = g.fromJson(jsonObject1.toString(), MyPlan::class.java)
+                                myPlans.add(group)
+                            } else {
+                                break
+                            }
+                        }
+                        //  Toast.makeText(getActivity(), "1" + jsonObject.getString(Constant.MESSAGE).toString(), Toast.LENGTH_SHORT).show()
+                        //important
+                        val adapter = MyplansAdapter(activity, myPlans)
+                        binding.rvplan.adapter = adapter
+                        binding.rvplan.visibility = View.VISIBLE
+                     //   swipeRefreshLayout.isRefreshing = false
+
+                    } else {
+                        DialogUtils.showCustomDialog(activity, ""+jsonObject.getString(Constant.MESSAGE))
+                      //  swipeRefreshLayout.isRefreshing = false
+                    }
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                    Toast.makeText(getActivity(), e.toString(), Toast.LENGTH_SHORT).show()
+                }
+            }
+        }, activity, com.app.fivepl.helper.Constant.PLAN_LIST, params, true)
+
+
+
+    }
 
 
     private fun userdetails() {
