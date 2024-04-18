@@ -23,6 +23,7 @@
 
 
     <com.google.android.material.card.MaterialCardView
+        android:visibility="gone"
         android:layout_below="@+id/youtube_player_view"
         android:id="@+id/card_view"
         app:cardCornerRadius="@dimen/_10sdp"

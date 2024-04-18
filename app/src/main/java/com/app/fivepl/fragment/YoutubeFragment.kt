@@ -75,6 +75,8 @@ class YoutubeFragment : Fragment() {
                             val option1 = jsonObject1.getString("option_1")
                             val option2 = jsonObject1.getString("option_2")
                             val option3 = jsonObject1.getString("option_3")
+                            val correct_option = jsonObject1.getString("correct_option")
+
 
                             val id = jsonObject1.getString("id")
                             binding!!.tvQuestionno.text = "Question " + id
@@ -183,6 +185,7 @@ class YoutubeFragment : Fragment() {
                                         when (state) {
                                             PlayerConstants.PlayerState.ENDED -> {
                                                 binding.youtubePlayerView.visibility = View.GONE
+                                                binding.cardView.visibility = View.VISIBLE
                                                 Log
                                                     .i("YT_PLAYER", "Streaming ended.")
 
